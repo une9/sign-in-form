@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World! - 회원가입</title>
+    <link rel="shortcut icon" href="../heart-solid.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-sign-up.css">
+</head>
+<body>
+    <main>
+        <div id="title">
+            <i class="fas fa-heart"></i>
+            <h1>회원가입</h1>
+        </div>
+        <section id="user-info-form">
+            <ul>
+                <h2>회원 정보</h2>
+                <li>
+                    <h3>닉네임</h3> <span>*</span>
+                    <input type="text" placeholder="닉네임을 입력하세요" id="nickname">
+                    <span class="alert nick-alert">닉네임에는 특수문자 및 띄어쓰기를 사용할 수 없습니다.</span>
+                </li>
+                <li>
+                    <h3>아이디</h3> <span>*</span>
+                    <input type="text" placeholder="5-12자의 영문, 숫자 혼합" id="id">
+                    <span class="alert id-alert">첫 글자에는 숫자를 사용할 수 없습니다.</span>
+                </li>
+                <li>
+                    <h3>비밀번호</h3> <span>*</span>
+                    <input type="password" placeholder="비밀번호를 입력하세요" id="pw">
+                    <div id="special" class="pw-condition">
+                        특수문자
+                    </div>
+                    <div id="upper-case" class="pw-condition">
+                        영어 대문자
+                    </div>
+                    <div id="lower-case" class="pw-condition">
+                        영어 소문자
+                    </div>
+                    <div id="length" class="pw-condition">
+                        6-12글자
+                    </div>
+                </li>
+                <li>
+                    <h3>비밀번호 확인</h3> <span>*</span>
+                    <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="pw2">
+                </li>
+                <li>
+                    <h3>성별</h3> <span>*</span>
+                    <div id="radiobuttons">
+                        <div>
+                            <input type="radio" name="sex" id="man" value="man">
+                            <label for="man" id="manlabel">남</label>
+                            <input type="radio" name="sex" id="woman" value="woman">
+                            <label for="woman" id="womanlabel">여</label>
+                        </div>
+                        <input type="radio" name="sex" id="unselect" value="unselect" checked="checked">
+                        <label for="unselect" id="unselectlabel">선택하지 않음</label>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="agreements">
+            <ul>
+                <h2>약관 동의</h2>
+                <div id="select-all-box">
+                    <input type="checkbox" name="select-all" id="select-all">
+                    <label for="select-all">약관 모든 내용을 확인하였으며, 동의합니다.</label>
+                </div>
+                <div id="select-box">
+                    <div class="must">
+                        <li>
+                            <input type="checkbox" id="must1">
+                            <label for="must1">이용약관 (필수)</label>
+                            <div class="description">
+                                넌 모르지 <br>
+                                아직 못다 핀 <br>
+                                널 위해 쓰여진 <br>
+                                오래된 사랑시 <br>
+                                헤매도 좋으니 <br>
+                                웃음 짓게 되길 <br>
+                                The one and only <br>
+                                You are my celebrity <br>
+                                잊지마 넌 흐린 어둠 사이 <br>
+                                왼손으로 그린 별 하나 <br>
+                                보이니 그 유일함이 얼마나 <br>
+                                아름다운지 말야 <br>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="must2">
+                            <label for="must2">개인정보 수집 및 이용 (필수)</label>
+                            <div class="description">
+                                기입한 개인정보는 저장되지 않으니 걱정마세요:)
+                            </div>
+                        </li>
+                    </div>
+                    <li id="last-choice">
+                        <input type="checkbox" id="option">
+                        <label for="must2">선택하든지 말든지 (선택)</label>
+                    </li>
+                </div>
+            </ul>
+        </section>
+        <input type="submit" value="회원가입" id="submit">
+    </main>
+    <script src="../main.js"></script>
+    <script src="https://kit.fontawesome.com/a44f7f0fa8.js" crossorigin="anonymous"></script>
+</body>
+</html>

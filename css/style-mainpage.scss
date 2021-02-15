@@ -1,0 +1,52 @@
+@use 'style' as s;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#log-in-box {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+}
+
+#input-box {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        @include s.inputbox;
+    }
+
+    input:first-child {
+        margin-bottom: 0.4rem;
+    }
+}
+
+input[value="로그인"] {
+    background: s.$main-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: calc(4.2rem + 4px);
+    width: 6rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    font-family: 'NEXON Lv2 Gothic';
+    letter-spacing: s.$letter-spacing;
+}
+
+#func {
+    font-size: 0.8rem;
+    color: grey;
+    padding-top: 0.5rem;
+
+    a {
+        padding: 0 0.4rem;
+        color: black;
+        text-decoration: none;
+    }
+}

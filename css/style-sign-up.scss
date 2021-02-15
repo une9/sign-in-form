@@ -1,0 +1,158 @@
+@use 'style' as s;
+
+html {
+    font-family: 'NEXON Lv2 Gothic';
+    word-break: keep-all;
+}
+
+body {
+    font-size: 0.9rem;
+}
+
+h2 {
+    @include s.h2style;
+    display: block;
+    color: s.$main-color;
+    text-align: center;
+    padding: 3.2rem 1.2rem;
+}
+
+#user-info-form {
+    display: flex;
+    flex-direction: column;
+
+    // input[type='text'] {
+    //     @include s.inputbox;
+    //     border-color: lightgrey;
+    //     display: block;
+    //     margin: 0.5rem 0;
+    //     width: 16rem;
+    // }
+
+    #radiobuttons {
+        padding: 0.5rem 0;
+
+        input[type='radio'] {
+            opacity: 0;
+            position: fixed;
+            width: 0;
+        }
+
+        div {
+            width: calc(17rem + 2px);
+            display: flex;
+            margin-right: 0;
+        }
+    
+        label {
+            display: inline-block;
+            border-radius: 5px;
+            cursor: pointer;
+            background: rgb(238, 238, 238);
+            border: s.$border-default;
+            border-color: lightgrey;
+            padding: 0.5rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        #manlabel {
+            border-radius: 5px 0 0 0;
+        }
+
+        #womanlabel {
+            border-radius: 0 5px 0 0;
+        }
+
+        #unselectlabel {
+            width: 16rem;
+            border-radius: 0 0 5px 5px;
+        }
+    
+        input[type="radio"]:checked + label {
+            background:white;
+            border: s.$border-default;
+        }
+    
+        input[type="radio"]:focus + label {
+            border: s.$border-default;
+        }
+    }
+
+    h3 {
+        display: inline;
+    }
+
+    span {
+        color: s.$main-color;
+    }
+
+    .alert {
+        font-size: s.$small-font-size;
+        color: red;
+        opacity: 0;
+    }
+
+    .alert-display {
+        opacity: 1;
+    }
+
+    li {
+        padding-bottom: 1rem;
+    }
+}
+
+#select-all-box {
+    border-bottom: s.$border-default;
+    border-color: lightgrey;
+    margin-bottom: 1.2rem;
+}
+
+#select-all {
+    margin-bottom: 1.2rem;
+}
+#select-box {
+    margin: 0 1.6rem 0 1.2rem;
+}
+
+.pw-condition {
+    font-size: s.$small-font-size;
+    padding: 0.2rem;
+    color: grey;
+}
+
+#agreements {
+    li {
+        padding-bottom: 1.2rem;
+    }
+
+    #last-choice {
+        padding-bottom: 0;
+    }
+}
+
+.must {
+    border-bottom: s.$border-default;
+    border-color: lightgrey;
+    margin-bottom: 1.2rem;
+}
+
+.description {
+    padding: 1rem;
+    max-height: 6rem;
+    overflow-y: scroll;
+    margin: 0.5rem 0 0.5rem 1.6rem;
+    border: s.$border-default;
+    line-height: 1.4rem;
+}
+
+#submit {
+    width: 16rem;
+    height: 3rem;
+    background: grey;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 2rem 1.2rem 1.2rem 1.2rem;
+    cursor: pointer;
+}
