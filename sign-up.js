@@ -134,7 +134,7 @@ function disabledCheck([mustcheckText, mustcheckBox]) {
 
 function submitFunc(e) {
     alert('정보를 저장하지 않습니다! 로그인 페이지로 이동합니다.');
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
 }
 
 function main() {

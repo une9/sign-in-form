@@ -4,7 +4,7 @@ function buttonFunc() {
 
     if (idInput.value && pwInput.value) {
         alert('안됩니다😂');
-        window.location.href = '../index.html';
+        window.location.href = 'index.html';
     } else if (idInput.value === '') {
         idInput.classList.add('x');
     } else if (pwInput.value === '') {
