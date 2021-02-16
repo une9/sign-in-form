@@ -27,6 +27,7 @@ h2 {
 
     input[type='text'], 
     input[type='password'] {
+        padding: 0.4rem 0.5rem;
         width: 90%;
     }
 
@@ -50,8 +51,8 @@ h2 {
             background: rgb(238, 238, 238);
             border: s.$border-default;
             border-color: lightgrey;
-            width: calc(151.725px - 1rem);
-            padding: 0.5rem;
+            width: calc(154.915px - 1.4rem);
+            padding: 0.7rem;
             text-align: center;
         }
 
@@ -150,7 +151,7 @@ input[type=checkbox], label {
 }
 
 #submit {
-    width: 90%;
+    width: 100%;
     height: 3rem;
     border: none;
     border-radius: 5px;
