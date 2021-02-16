@@ -162,7 +162,8 @@ h2 {
 }
 #user-info-form input[type=text],
 #user-info-form input[type=password] {
-  padding: 0.4rem 0.5rem;
+  padding: 0.5rem;
+  margin: 0.6rem 0;
   width: 90%;
 }
 #user-info-form #radiobuttons {
@@ -184,7 +185,7 @@ h2 {
   border: 1px solid grey;
   border-color: lightgrey;
   width: calc(154.915px - 1.4rem);
-  padding: 0.7rem;
+  padding: 1rem 0.7rem;
   text-align: center;
 }
 #user-info-form #radiobuttons #manlabel {
@@ -275,7 +276,7 @@ input[type=checkbox], label {
   border-radius: 5px;
   background: #430081;
   color: white;
-  margin: 2rem 0 1.2rem 0;
+  margin: 3.2rem 0 1.2rem 0;
   cursor: pointer;
 }
 
