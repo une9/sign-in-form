@@ -20,17 +20,17 @@
                 <h2>회원 정보</h2>
                 <li>
                     <h3>닉네임</h3> <span>*</span>
-                    <input type="text" placeholder="닉네임을 입력하세요" id="nickname">
+                    <input type="text" placeholder="닉네임을 입력하세요" id="nickname" class="mustcheck-text">
                     <span class="alert nick-alert">닉네임에는 특수문자 및 띄어쓰기를 사용할 수 없습니다.</span>
                 </li>
                 <li>
                     <h3>아이디</h3> <span>*</span>
-                    <input type="text" placeholder="5-12자의 영문, 숫자 혼합" id="id">
+                    <input type="text" placeholder="5-12자의 영문, 숫자 혼합" id="id" class="mustcheck-text">
                     <span class="alert id-alert">첫 글자에는 숫자를 사용할 수 없습니다.</span>
                 </li>
                 <li>
                     <h3>비밀번호</h3> <span>*</span>
-                    <input type="password" placeholder="비밀번호를 입력하세요" id="pw">
+                    <input type="password" placeholder="비밀번호를 입력하세요" id="pw" class="mustcheck-text">
                     <div id="special" class="pw-condition">
                         특수문자
                     </div>
@@ -46,7 +46,7 @@
                 </li>
                 <li>
                     <h3>비밀번호 확인</h3> <span>*</span>
-                    <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="pw2">
+                    <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="pw2" class="mustcheck-text">
                 </li>
                 <li>
                     <h3>성별</h3> <span>*</span>
@@ -54,10 +54,10 @@
                         <div>
                             <input type="radio" name="sex" id="man" value="man">
                             <label for="man" id="manlabel">남</label>
-                            <input type="radio" name="sex" id="woman" value="woman">
+                            <input type="radio" name="sex" id="woman" value="woman" checked="checked">
                             <label for="woman" id="womanlabel">여</label>
                         </div>
-                        <input type="radio" name="sex" id="unselect" value="unselect" checked="checked">
+                        <input type="radio" name="sex" id="unselect" value="unselect">
                         <label for="unselect" id="unselectlabel">선택하지 않음</label>
                     </div>
                 </li>
@@ -68,12 +68,12 @@
                 <h2>약관 동의</h2>
                 <div id="select-all-box">
                     <input type="checkbox" name="select-all" id="select-all">
-                    <label for="select-all">약관 모든 내용을 확인하였으며, 동의합니다.</label>
+                    <label for="select-all">약관의 모든 내용을 확인하였으며, 동의합니다.</label>
                 </div>
                 <div id="select-box">
                     <div class="must">
                         <li>
-                            <input type="checkbox" id="must1">
+                            <input type="checkbox" id="must1" class="checkbox mustcheck-box">
                             <label for="must1">이용약관 (필수)</label>
                             <div class="description">
                                 넌 모르지 <br>
@@ -91,7 +91,7 @@
                             </div>
                         </li>
                         <li>
-                            <input type="checkbox" id="must2">
+                            <input type="checkbox" id="must2" class="checkbox mustcheck-box">
                             <label for="must2">개인정보 수집 및 이용 (필수)</label>
                             <div class="description">
                                 기입한 개인정보는 저장되지 않으니 걱정마세요:)
@@ -99,15 +99,15 @@
                         </li>
                     </div>
                     <li id="last-choice">
-                        <input type="checkbox" id="option">
-                        <label for="must2">선택하든지 말든지 (선택)</label>
+                        <input type="checkbox" id="option" class="checkbox">
+                        <label for="option">선택하든지 말든지 (선택)</label>
                     </li>
                 </div>
             </ul>
         </section>
-        <input type="submit" value="회원가입" id="submit">
+        <input type="submit" value="회원가입" id="submit" disabled="disabled">
     </main>
-    <script src="../main.js"></script>
+    <script src="../sign-up.js"></script>
     <script src="https://kit.fontawesome.com/a44f7f0fa8.js" crossorigin="anonymous"></script>
 </body>
 </html>

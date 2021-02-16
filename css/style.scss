@@ -86,7 +86,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1.2rem;
+    margin: 2.4rem 1.2rem;
 }
 
 #title {
@@ -129,12 +129,12 @@ input:focus {
     outline: none;
 }
 
-.x {
-    border-color: red !important;
+input.x {
+    border-color: red;
 }
 
-.yes {
-    color: rgb(0, 153, 255) !important;
+.pw-condition.yes {
+    color: rgb(0, 153, 255);
 }
 
 @mixin h2style {

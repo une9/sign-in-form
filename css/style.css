@@ -76,7 +76,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.2rem;
+  margin: 2.4rem 1.2rem;
 }
 
 #title {
@@ -117,12 +117,12 @@ input:focus {
   outline: none;
 }
 
-.x {
-  border-color: red !important;
+input.x {
+  border-color: red;
 }
 
-.yes {
-  color: #0099ff !important;
+.pw-condition.yes {
+  color: #0099ff;
 }
 
 @media screen and (min-width: 360px) {

@@ -76,7 +76,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.2rem;
+  margin: 2.4rem 1.2rem;
 }
 
 #title {
@@ -96,9 +96,58 @@ main {
   padding: 0 0.5rem 0 0.5rem;
 }
 
+input[type=text],
+input[type=password] {
+  width: 12rem;
+  height: 1.5rem;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid grey;
+  border-color: lightgrey;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  display: block;
+  margin: 0.5rem 0;
+  width: 16rem;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+.x {
+  border-color: red !important;
+}
+
+.yes {
+  color: #0099ff !important;
+}
+
 @media screen and (min-width: 360px) {
   html {
     display: flex;
     justify-content: center;
   }
+}
+main {
+  height: calc(100vh - 4.8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#yet {
+  margin: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background: #430081;
+  width: 90%;
+  padding: 1.2rem 0;
+  border-radius: 5px;
+  text-align: center;
 }/*# sourceMappingURL=style-find-id.css.map */

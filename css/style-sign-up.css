@@ -76,7 +76,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.2rem;
+  margin: 2.4rem 1.2rem;
 }
 
 #title {
@@ -117,12 +117,12 @@ input:focus {
   outline: none;
 }
 
-.x {
-  border-color: red !important;
+input.x {
+  border-color: red;
 }
 
-.yes {
-  color: #0099ff !important;
+.pw-condition.yes {
+  color: #0099ff;
 }
 
 @media screen and (min-width: 360px) {
@@ -138,6 +138,10 @@ html {
 
 body {
   font-size: 0.9rem;
+}
+
+section {
+  width: 100%;
 }
 
 h2 {
@@ -156,6 +160,10 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+#user-info-form input[type=text],
+#user-info-form input[type=password] {
+  width: 90%;
+}
 #user-info-form #radiobuttons {
   padding: 0.5rem 0;
 }
@@ -165,9 +173,7 @@ h2 {
   width: 0;
 }
 #user-info-form #radiobuttons div {
-  width: calc(17rem + 2px);
   display: flex;
-  margin-right: 0;
 }
 #user-info-form #radiobuttons label {
   display: inline-block;
@@ -176,9 +182,9 @@ h2 {
   background: #eeeeee;
   border: 1px solid grey;
   border-color: lightgrey;
+  width: calc(151.725px - 1rem);
   padding: 0.5rem;
   text-align: center;
-  flex-grow: 1;
 }
 #user-info-form #radiobuttons #manlabel {
   border-radius: 5px 0 0 0;
@@ -187,7 +193,7 @@ h2 {
   border-radius: 0 5px 0 0;
 }
 #user-info-form #radiobuttons #unselectlabel {
-  width: 16rem;
+  width: 90%;
   border-radius: 0 0 5px 5px;
 }
 #user-info-form #radiobuttons input[type=radio]:checked + label {
@@ -206,13 +212,13 @@ h2 {
 #user-info-form .alert {
   font-size: 0.8rem;
   color: red;
-  opacity: 0;
+  display: none;
 }
 #user-info-form .alert-display {
-  opacity: 1;
+  display: block;
 }
 #user-info-form li {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 #select-all-box {
@@ -257,13 +263,21 @@ h2 {
   line-height: 1.4rem;
 }
 
+input[type=checkbox], label {
+  cursor: pointer;
+}
+
 #submit {
-  width: 16rem;
+  width: 90%;
   height: 3rem;
-  background: grey;
   border: none;
   border-radius: 5px;
+  background: #430081;
   color: white;
-  margin: 2rem 1.2rem 1.2rem 1.2rem;
+  margin: 2rem 0 1.2rem 0;
   cursor: pointer;
+}
+
+#submit:disabled {
+  background: grey;
 }/*# sourceMappingURL=style-sign-up.css.map */

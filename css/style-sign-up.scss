@@ -9,6 +9,10 @@ body {
     font-size: 0.9rem;
 }
 
+section {
+    width: 100%
+}
+
 h2 {
     @include s.h2style;
     display: block;
@@ -21,13 +25,10 @@ h2 {
     display: flex;
     flex-direction: column;
 
-    // input[type='text'] {
-    //     @include s.inputbox;
-    //     border-color: lightgrey;
-    //     display: block;
-    //     margin: 0.5rem 0;
-    //     width: 16rem;
-    // }
+    input[type='text'], 
+    input[type='password'] {
+        width: 90%;
+    }
 
     #radiobuttons {
         padding: 0.5rem 0;
@@ -39,9 +40,7 @@ h2 {
         }
 
         div {
-            width: calc(17rem + 2px);
             display: flex;
-            margin-right: 0;
         }
     
         label {
@@ -51,9 +50,9 @@ h2 {
             background: rgb(238, 238, 238);
             border: s.$border-default;
             border-color: lightgrey;
+            width: calc(151.725px - 1rem);
             padding: 0.5rem;
             text-align: center;
-            flex-grow: 1;
         }
 
         #manlabel {
@@ -65,7 +64,7 @@ h2 {
         }
 
         #unselectlabel {
-            width: 16rem;
+            width: 90%;
             border-radius: 0 0 5px 5px;
         }
     
@@ -90,15 +89,15 @@ h2 {
     .alert {
         font-size: s.$small-font-size;
         color: red;
-        opacity: 0;
+        display: none;
     }
 
     .alert-display {
-        opacity: 1;
+        display: block;
     }
 
     li {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -146,13 +145,21 @@ h2 {
     line-height: 1.4rem;
 }
 
+input[type=checkbox], label {
+    cursor: pointer;
+}
+
 #submit {
-    width: 16rem;
+    width: 90%;
     height: 3rem;
-    background: grey;
     border: none;
     border-radius: 5px;
+    background: s.$main-color;
     color: white;
-    margin: 2rem 1.2rem 1.2rem 1.2rem;
+    margin: 2rem 0 1.2rem 0;
     cursor: pointer;
+}
+
+#submit:disabled {
+    background: grey;
 }
