@@ -72,9 +72,9 @@ function pwCheck(e) {
     }
 
     const pw2 = document.getElementById('pw2');
-    if (input === pw2.value) {
-        pw2.classList.remove('o');
-        pw2.classList.add('x');
+    if (pw2.value !== '' && input === pw2.value) {
+        pw2.classList.remove('x');
+        pw2.classList.add('o');
     }
 }
 
