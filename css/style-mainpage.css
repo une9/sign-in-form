@@ -70,6 +70,7 @@ html {
 
 body {
   max-width: 360px;
+  font-size: 0.9rem;
 }
 
 main {
@@ -160,6 +161,9 @@ body {
 }
 #input-box input:first-child {
   margin-bottom: 0.4rem;
+}
+#input-box input.x {
+  border-color: red;
 }
 
 input[value=로그인] {

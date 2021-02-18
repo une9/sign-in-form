@@ -98,12 +98,26 @@ function selectAllFunc(e) {
         for (let box of checkboxes) {
             box.checked = true;
         }
+    } else {
+        for (let box of checkboxes) {
+            box.checked = false;
+        }
     }
 }
 
-function unselectFunc(e) {
+function selectFunc(e) {
     const selectAll = document.getElementById('select-all');
-    if (!e.currentTarget.checked) {
+    console.log(e.currentTarget);
+    if (e.currentTarget.checked == true) {
+        let unchecked = 0;
+        const selectBoxes = document.querySelectorAll('#select-box input');
+        for (let box of selectBoxes) {
+            if (box.checked == false) unchecked++;
+        }
+        if (!unchecked) {
+            selectAll.checked = true;
+        }
+    } else {
         selectAll.checked = false;
     }
 }
@@ -134,7 +148,7 @@ function disabledCheck([mustcheckText, mustcheckBox]) {
 
 function submitFunc(e) {
     alert('정보를 저장하지 않습니다! 로그인 페이지로 이동합니다.');
-    window.location.href = 'index.html';
+    window.location.href = '../';
 }
 
 function main() {
@@ -149,14 +163,12 @@ function main() {
     pw2Input.addEventListener('input', pw2Check);
 
     const selectAll = document.getElementById('select-all');
-    const must1 = document.getElementById('must1');
-    const must2 = document.getElementById('must2');
-    const option = document.getElementById('option');
+    const selectBoxes = document.querySelectorAll('#select-box input');
 
     selectAll.addEventListener('click', selectAllFunc);
-    must1.addEventListener('click', unselectFunc);
-    must2.addEventListener('click', unselectFunc);
-    option.addEventListener('click', unselectFunc);
+    for (box of selectBoxes) {
+        box.addEventListener('click', selectFunc);
+    }
     
     const submit = document.getElementById('submit');
     submit.addEventListener('click', submitFunc);
@@ -166,10 +178,6 @@ function main() {
     for (let mustcheck of mustcheckText) {
         mustcheck.addEventListener('input', () => disabledCheck([mustcheckText, mustcheckBox]));
     }
-    for (let mustcheck of mustcheckBox) {
-        mustcheck.addEventListener('click', () => disabledCheck([mustcheckText, mustcheckBox]));
-    }
-    selectAll.addEventListener('click', () => disabledCheck([mustcheckText, mustcheckBox]));
 }
 
 main();

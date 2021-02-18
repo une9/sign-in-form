@@ -24,7 +24,12 @@ body {
     input:first-child {
         margin-bottom: 0.4rem;
     }
+
+    input.x {
+        border-color: red;
+    }
 }
+
 
 input[value="로그인"] {
     background: s.$main-color;
